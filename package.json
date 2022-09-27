@@ -1,0 +1,13 @@
+{
+  "name": "bicycle-infra-demo-map",
+  "version": "1.0.0",
+  "author": "Kacper Goliński",
+  "license": "MIT",
+  "scripts": {
+    "start": "esbuild --bundle ts/app.ts --outfile=www/app.js --servedir=www",
+    "build": "esbuild --bundle ts/app.ts --outfile=www/app.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.9"
+  }
+}
