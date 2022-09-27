@@ -13,12 +13,37 @@ const mapStyle: StyleSpecification = {
       attribution:
         '&copy <a href="https://www.openstreetmap.org/copyright" rel="nofollow external noopener" taget="_blank">OpenStreetMap</a> contributors; &copy<a href="https://openmaptiles.org/" rel="nofollow external noopener" taget="_blank">OpenMapTiles</a>',
     },
+    bikeInfra: {
+      type: 'geojson',
+      data: './infra.geojson',
+    },
   },
   layers: [
     {
       id: 'background',
       type: 'raster',
       source: 'velomapa',
+    },
+    {
+      id: 'bikeInfra',
+      type: 'line',
+      source: 'bikeInfra',
+      layout: {
+        'line-join': 'round',
+        'line-cap': 'round',
+      },
+      paint: {
+        'line-color': 'red',
+        'line-width': [
+          'interpolate',
+          ['exponential', 0.5],
+          ['zoom'],
+          11,
+          1,
+          15,
+          3,
+        ],
+      },
     },
   ],
 }
@@ -33,7 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
     container: mapContainer,
     style: mapStyle,
     center: [18.65, 54.4],
-    zoom: 11,
-    maxZoom: 16,
+    zoom: 10,
+    hash: true,
   })
 })
