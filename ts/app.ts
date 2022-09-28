@@ -15,7 +15,7 @@ const mapStyle: StyleSpecification = {
     },
     bikeInfra: {
       type: 'geojson',
-      data: './infra.geojson',
+      data: './infra.json',
     },
   },
   layers: [
@@ -59,6 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
     style: mapStyle,
     center: [18.65, 54.4],
     zoom: 10,
+    minZoom: 9,
     hash: true,
   })
 })
