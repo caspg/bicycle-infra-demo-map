@@ -1,3 +1,5 @@
+<video src='[./demo.mov](https://github.com/caspg/bicycle-infra-demo-map/blob/master/demo.mov)' width=600/>
+
 ## Generating geojson with bicycle infrastructure
 
 Software requirements:
