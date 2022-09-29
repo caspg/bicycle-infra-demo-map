@@ -19,9 +19,10 @@ const mapStyle: StyleSpecification = {
     },
     // bikeInfra: {
     //   type: 'vector',
-    //   tiles: ['http://localhost:4000/tiles/{z}/{x}/{y}'],
+    //   // tiles: ['http://localhost:5050/mbtiles/{z}/{x}/{y}'],
+    //   tiles: ['https://tiles.velomapa.pl/mbtiles/{z}/{x}/{y}'],
     //   // this will allow to overzoom
-    //   maxzoom: 14,
+    //   maxzoom: 12,
     // },
   },
   layers: [
@@ -70,7 +71,6 @@ window.addEventListener('DOMContentLoaded', () => {
     // zoom: 5,
     center: [18.65, 54.4],
     zoom: 10,
-    minZoom: 9,
     // hash: true,
     // cooperativeGestures: true,
   })
